@@ -1,20 +1,18 @@
-//import firebase auth
-
-//import 'package:my_tdd_devops_mobile/models/user.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:my_tdd_devops_mobile/models/custom_user.dart';
 
 class AuthService {
-  //final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   // create user object based on FirebaseUser
-
-  /*User _userFromFirebaseUSer(FirebaseUser user) {
-    return user != null ? User(uid: user.uid) : null;
-  }*/
+  CustomUser _userFromFirebaseUser(User user) {
+    return user != null ? CustomUser(uid: user.uid) : null;
+  }
 
   // auth change user stream
-  /*Stream<User> get user {
+  /*Stream<CustomUser> get user {
     return _auth.onAuthStateChanged
         //.map((FirebaseUser user) => _userFromFirebaseUSer(user));
-        .map(_userFromFirebaseUSer);
+        .map(_userFromFirebaseUser);
   }*/
 }

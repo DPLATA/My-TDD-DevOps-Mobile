@@ -6,6 +6,8 @@ void main() {
   runApp(MyApp());
 }
 
+//remove google servcice json from git
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
